@@ -24,11 +24,12 @@ def checkTriangle(l):
     if a == b or b == c or c == a: return True
     return False
 
-ans = input()
+c = int(input("Количество точек:\n"))
+
 dots = []
-while ans != '0':
+for i in range(c):
+    ans = input("Введите координаты точки через пробел:\n")
     dots.append(list(map(lambda x: int(x), ans.split(' '))))
-    ans = input()
 
 triangles = []
 for i in range(len(dots)):
