@@ -21,19 +21,18 @@ def checkTriangle(l):
     if c >= (b + a): return False
     return True
 
-ans = input()
+k = int(input("Количество точек:\n"))
+
 dots = []
-while ans != '0':
+for i in range(k):
+    ans = input("Введите координаты точки через пробел:\n")
     dots.append(list(map(lambda x: int(x), ans.split(' '))))
-    ans = input()
 
 triangles = []
 for i in range(len(dots)):
     for j in range(i+1, len(dots)):
         for k in range(j+1, len(dots)):
             triangles.append([dots[i], dots[j], dots[k]])
-
-print(*triangles, sep='\n')
 
 k = 0
 for t in triangles:
@@ -43,8 +42,6 @@ print("Количество возможных треугольников (ал�
 print()
 
 triangles = list(itertools.combinations(dots, 3))
-
-print(*triangles, sep='\n')
 
 k = 0
 for t in triangles:
