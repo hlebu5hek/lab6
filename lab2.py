@@ -29,7 +29,7 @@ c = int(input("Количество точек:\n"))
 dots = []
 for i in range(c):
     ans = input("Введите координаты точки через пробел:\n")
-    dots.append(list(map(lambda x: int(x), ans.split(' '))))
+    dots.append(list(map(lambda x: float(x), ans.split(' '))))
 
 triangles = []
 for i in range(len(dots)):
